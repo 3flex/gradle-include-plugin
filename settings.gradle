@@ -1,0 +1,9 @@
+pluginManagement {
+    includeBuild("greeting-plugin")
+}
+
+plugins {
+    id("com.gradle.enterprise").version("3.6")
+}
+
+include("my-greeting-app")

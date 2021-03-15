@@ -1,0 +1,20 @@
+plugins {
+    id("java-gradle-plugin")
+    id("org.jetbrains.kotlin.multiplatform").version("1.4.31")
+}
+
+group = "org.sample"
+version = "1.0-SNAPSHOT"
+
+gradlePlugin {
+    plugins {
+        create("customPlugin") {
+            id = "org.sample.greeting"
+            implementationClass = "org.sample.GreetingPlugin"
+        }
+    }
+}
+
+kotlin {
+    jvm()
+}
